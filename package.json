@@ -1,18 +1,19 @@
 {
   "name": "ng2-image-hover-zoom",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Zoom the Image on Hover using Angular 2",
   "main": "./bundles/index.umd.js",
   "module": "./src/index.js",
   "typings": "./src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:prod:ngc": "ngc && npm run build",
-    "build": "webpack --progress"
+    "prepublish": "ngc && npm run build",
+    "build": "webpack --progress",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mohammedubaid/ng2-image-hover-zoom.git"
+    "url": "https://github.com/mohammedubaid/ng2-image-hover-zoom.git"
   },
   "keywords": [
     "Angular 2",
@@ -33,19 +34,19 @@
   },
   "homepage": "https://github.com/mohammedubaid/ng2-image-hover-zoom#readme",
   "dependencies": {
-    "@angular/common": "~2.1.2",
-    "@angular/compiler": "~2.1.2",
-    "@angular/compiler-cli": "~2.1.2",
-    "@angular/core": "~2.1.2",
-    "@angular/forms": "~2.1.2",
-    "@angular/http": "~2.1.2",
-    "@angular/platform-browser": "~2.1.2",
-    "@angular/platform-browser-dynamic": "~2.1.2",
-    "@angular/platform-server": "~2.1.2",
-    "@angular/router": "~3.1.2",
+    "@angular/common": "~2.4.10",
+    "@angular/compiler": "~2.4.10",
+    "@angular/compiler-cli": "~2.4.10",
+    "@angular/core": "~2.4.10",
+    "@angular/forms": "~2.4.10",
+    "@angular/http": "~2.4.10",
+    "@angular/platform-browser": "~2.4.10",
+    "@angular/platform-browser-dynamic": "~2.4.10",
+    "@angular/platform-server": "~2.4.10",
+    "@angular/router": "~3.4.10",
     "core-js": "^2.4.1",
-    "rxjs": "5.0.0-beta.12",
-    "zone.js": "~0.6.26",
+    "rxjs": "5.2.0",
+    "zone.js": "~0.8.4",
     "@angularclass/bootloader": "~1.0.1",
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
@@ -54,10 +55,10 @@
   },
   "devDependencies": {
     "@types/jasmine": "2.5.46",
-    "@types/node": "^6.0.38",
-    "angular2-template-loader": "^0.4.0",
-    "awesome-typescript-loader": "^2.2.4",
-    "codelyzer": "~2.0.0",
+    "@types/node": "^7.0.8",
+    "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.1.2",
+    "codelyzer": "~3.0.0-beta.4",
     "compression-webpack-plugin": "^0.3.2",
     "copy-webpack-plugin": "^4.0.1",
     "json-loader": "^0.5.4",
@@ -65,11 +66,12 @@
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.4",
     "ts-helpers": "^1.1.2",
-    "ts-node": "^1.3.0",
+    "ts-node": "^3.0.0",
     "tslint": "~4.5.1",
     "tslint-loader": "^3.4.3",
-    "typescript": "2.0.2",
-    "webpack-bundle-analyzer": "1.4.1",
-    "webpack-merge": "~0.16.0"
+    "typescript": "2.2.1",
+    "webpack-bundle-analyzer": "2.3.1",
+    "webpack-merge": "~4.1.0",
+    "semantic-release": "^6.3.2"
   }
 }
