@@ -1,6 +1,6 @@
 {
   "name": "ng2-image-hover-zoom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Zoom the Image on Hover using Angular 2",
   "main": "./bundles/index.umd.js",
   "module": "./src/index.js",
