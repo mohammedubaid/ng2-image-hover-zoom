@@ -7,9 +7,10 @@
   "typings": "./src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "ngc && npm run build",
+    "prepublish": "npm run snyk-protect && ngc && npm run build",
     "build": "webpack --progress",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "snyk-protect": "snyk protect"
   },
   "repository": {
     "type": "git",
@@ -51,7 +52,8 @@
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "js.clone": "0.0.3",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.46",
@@ -73,5 +75,6 @@
     "webpack-bundle-analyzer": "2.3.1",
     "webpack-merge": "~4.1.0",
     "semantic-release": "^6.3.2"
-  }
+  },
+  "snyk": true
 }
